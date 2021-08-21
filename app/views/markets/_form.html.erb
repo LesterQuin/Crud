@@ -1,0 +1,19 @@
+<%= form_for market do |form| %>
+
+  <div class="field form-group">
+    <%= form.text_field :name, class: "form-control", placeholder: "FullName", required: true %>
+  </div>
+  <div class="field form-group">
+    <%= form.text_field :address, class: "form-control", placeholder: "Address", required: true %>
+  </div>
+  <div class="field form-group">
+    <%= form.text_field :product, class: "form-control", placeholder: "Product", required: true %>
+  </div>
+  <div class="field form-group">
+    <%= form.text_field :price, class: "form-control", placeholder: "Price", required: true %>
+  </div>
+
+    <div class="actions">
+    <%= form.submit class: "btn btn-secondary"%>
+    </div><br/>
+<% end %>

@@ -1,0 +1,29 @@
+<h1> Team Bee </h1>
+
+<table>
+
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Product</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+
+  <% @markets.each do |market|%>
+ 
+  <tr>
+  <td><%= market.name %></td>
+  <td><%= market.address %></td>
+  <td><%= market.product %></td>
+  <td><%= market.price %></td>
+  <td><%= link_to 'Show', market_path(market) %></td>
+  <td><%= link_to 'Edit', edit_market_path(market) %></td>
+  <td><%= link_to 'Delete', market_path(market), method: :delete, data:{confirm: "warning"} %></td>
+  <%end%>
+  </tr>
+</table>
+  </br>
+  <%= link_to 'Add New', new_market_path %>
+
